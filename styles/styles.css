@@ -8,8 +8,6 @@
     display: flex;
     align-items: center;
     margin: 5px;
-    
-
   }
   
   /* Style the links inside the navigation bar */
@@ -83,58 +81,68 @@
   
   .categories a{
     color: black;
-    margin: 7px 15px;
+    padding: 5px 20% 5px 20%;
+    margin-top: 5px;
     font-size: 20px;
     font-weight: bolder;
     overflow: hidden;
+  }
+
+  .categories a:hover {
+    background-color: black;
+    color: white;
   }
 
 
   .main-body .welcome-page{
     grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    margin-left: 5px;
-
-
+    grid-row: 1 / 4;
     background: rgb(44,75,224);
     
+    margin-bottom: 5px;
+    margin-left: 5px;
   }
 
    .welcome-page h2{
       color: black;
-      margin: 0 15px;
       font-size: 40px;
       font-weight: bolder;
     }
 
 
-.main-body .infopage{
-  flex-direction: column;
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  width: 100%;
-  margin-right: 5px;
-  margin-top: 5px;
-  
-  background-color: blue;
-  display: flex;
-  align-items: center;
-}
+  .main-body .infopage{
+    flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    width: 100%;
+    margin-right: 5px;
+    margin-top: 5px;
+    
+    background-color: blue;
+    display: flex;
+    align-items: center;
+  }
 
   .infopage a{
     color: black;
     margin: 7px 15px;
+    padding: 5px 25% 5px 25%;
     font-size: 20px;
     font-weight: bolder;
     overflow: hidden;
+  }
+  
+  .infopage a:hover {
+    background-color: black;
+    color: white;
   }
   
 
 .main-body .shop-items{
 
   grid-column: 2 / 3;
-  grid-row: 3 / 7; /* TODO ovo pogledati*/
+  grid-row: 4 / 7; /* TODO ovo pogledati*/
   margin-left: 5px;
-
+  min-height: 400px;
   background: yellow;
 }
