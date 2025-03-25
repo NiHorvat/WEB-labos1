@@ -146,3 +146,30 @@
   min-height: 400px;
   background: yellow;
 }
+
+  .main-body .shop-items ul{
+    list-style: none;
+  }
+
+    .main-body .shop-items ul li{
+      display:inline-block;
+    }
+
+
+
+.kontakt-main{
+  justify-content: center;
+  align-items: center;  
+  
+}
+
+.kontakt-main table{
+    color: black;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;  
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 0 20px; 
+  }
