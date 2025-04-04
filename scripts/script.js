@@ -1,5 +1,14 @@
-import { generate_items_HTML } from "./generate";
+//import { generate_items_HTML } from "./generate";
 
+// TU MAPIRAM KATEGORIJE S NJIHOVIM "pravim imenima" 
+//zelim u kodu koristiti KATEGORIJA_1 a ne "Građevinska roba"
+//pa zato tu imam spojeno
+const KATEGORIJA_1 = ["Kategorija 1","Građevinska roba"];
+const KATEGORIJA_2 = ["Kategorija 2","Avioni"];
+const KATEGORIJA_3 = null;
+const KATEGORIJA_4 = null;
+const KATEGORIJA_5 = null;
+const KATEGORIJA_6 = null;
 
 
 let odabrana_kategorija = ""
@@ -99,25 +108,30 @@ function change_categorie(categorie) {
     change_shop_items();
 }
 
-
+//TODO ovo je ružno treba poboljšati kako kategorije se prenose
 function change_shop_items(){
+  
   const lista = document.querySelector("#shop-items-list");
   lista.innerHTML = "";
-  if(odabrana_kategorija === "Kategorija 1"){
-    for(let i = 0; i < 20; i++){
-      const el = document.createElement("li");
-      el.textContent = `kategorija 1 ${i} `;
-      lista.appendChild(el);
-    }
+  let items = [];
+  
+  switch (odabrana_kategorija) {
+    case KATEGORIJA_1[0]:
+      items = generate_items_HTML(KATEGORIJA_1[1]);
+      break;
+    case KATEGORIJA_2[0]:
+      items = generate_items_HTML(KATEGORIJA_2[1]);
+      break;
+    default:
+      break;
   }
-  else if(odabrana_kategorija === "Kategorija 2"){
-    for(let i = 0; i < 20; i++){
-      const el = document.createElement("li");
-      el.textContent = `kategorija 2 ${i} `;
 
-      lista.appendChild(el);
-    }
+  for(let i = 0; i < items.length; i++){
+    const el = document.createElement("li");
+    el.innerHTML = items[i];
+    lista.appendChild(el);
   }
+
 }
 
 //ljudi koji su se pretplatili na newsletter

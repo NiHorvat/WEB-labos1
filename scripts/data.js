@@ -1,8 +1,8 @@
-    const data = {
+const data = {
     "website": "moj webshop",
     "categories": [
         { 
-            "name" : "Građevisnka roba",
+            "name" : "Građevinska roba",
             "image" : "images/beton.jpg",
             "products" : [
                 { 
@@ -16,8 +16,25 @@
                 }
             ]
         },
+
+        { 
+            "name" : "Avioni",
+            "image" : "images/f16.jpg",
+            "products" : [
+                { 
+                    "name" : "Avion", "image" : "images/f16.jpg"
+                },
+                { 
+                    "name" : "Avion_1", "image" : "images/f16.jpg"
+                },                
+                { 
+                    "name" : "Avion_2", "image" : "images/f16.jpg"
+                }
+            ]
+        },
+
+
     ]
 };
 
 
-export default data;
