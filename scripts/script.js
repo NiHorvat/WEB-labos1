@@ -5,125 +5,79 @@
 //pa zato tu imam spojeno
 const KATEGORIJA_1 = ["Kategorija 1","Građevinska roba"];
 const KATEGORIJA_2 = ["Kategorija 2","Avioni"];
-const KATEGORIJA_3 = null;
-const KATEGORIJA_4 = null;
-const KATEGORIJA_5 = null;
-const KATEGORIJA_6 = null;
-
-
-let odabrana_kategorija = ""
+const KATEGORIJA_3 = ["Kategorija 3","Avioni"];
+const KATEGORIJA_4 = ["Kategorija 4","Avioni"];
+const KATEGORIJA_5 = ["Kategorija 5","Avioni"];
+const KATEGORIJA_6 = ["Kategorija 6","Avioni"];
 
 document
-  .getElementById("Kategorija 1")
+  .getElementById(KATEGORIJA_1[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 1");
-    odabrana_kategorija = "Kategorija 1";
+    change_categorie(KATEGORIJA_1[1]);
   });
 document
-  .getElementById("Kategorija 2")
+  .getElementById(KATEGORIJA_2[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 2");
-    odabrana_kategorija = "Kategorija 2";
+    change_categorie(KATEGORIJA_2[1]);
 
   });
 document
-  .getElementById("Kategorija 3")
+  .getElementById(KATEGORIJA_3[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 3");
-    odabrana_kategorija = "Kategorija 3";
+    change_categorie(KATEGORIJA_3[1]);
 
   });
 document
-  .getElementById("Kategorija 4")
+  .getElementById(KATEGORIJA_4[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 4");
-    odabrana_kategorija = "Kategorija 4";
+    change_categorie(KATEGORIJA_4[1]);
 
   });
 document
-  .getElementById("Kategorija 5")
+  .getElementById(KATEGORIJA_5[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 5");
-    odabrana_kategorija = "Kategorija 5";
+    change_categorie(KATEGORIJA_5[1]);
 
   });
 document
-  .getElementById("Kategorija 6")
+  .getElementById(KATEGORIJA_6[0])
   .addEventListener("click", function (event) {
     event.preventDefault();
-    change_categorie("Kategorija 6");
-    odabrana_kategorija = "Kategorija 6";
+    change_categorie(KATEGORIJA_6[1]);
 
   });
-document
-  .getElementById("Kategorija 7")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    change_categorie("Kategorija 7");
-    odabrana_kategorija = "Kategorija 7";
 
-  });
-document
-  .getElementById("Kategorija 8")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    change_categorie("Kategorija 8");
-    odabrana_kategorija = "Kategorija 8";
 
-  });
-document
-  .getElementById("Kategorija 9")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    change_categorie("Kategorija 9");
-    odabrana_kategorija = "Kategorija 9";
-
-  });
-document
-  .getElementById("Kategorija 10")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    change_categorie("Kategorija 10");
-    odabrana_kategorija = "Kategorija 10";
-
-  });
-document
-  .getElementById("Kategorija 11")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    change_categorie("Kategorija 11");
-    odabrana_kategorija = "Kategorija 11";
-
-  });
 
 function change_categorie(categorie) {
   document.getElementById("odabrana_kategorija").textContent =
     "Odabrana kategorija: " + categorie;
     console.log(odabrana_kategorija);
-    change_shop_items();
+    change_shop_items(categorie);
 }
 
 //TODO ovo je ružno treba poboljšati kako kategorije se prenose
-function change_shop_items(){
-  
+function change_shop_items(categorie){
   const lista = document.querySelector("#shop-items-list");
   lista.innerHTML = "";
   let items = [];
   
-  switch (odabrana_kategorija) {
-    case KATEGORIJA_1[0]:
+  switch (categorie) {
+    case KATEGORIJA_1[1]:
       items = generate_items_HTML(KATEGORIJA_1[1]);
       break;
-    case KATEGORIJA_2[0]:
+    case KATEGORIJA_2[1]:
       items = generate_items_HTML(KATEGORIJA_2[1]);
       break;
     default:
-      break;
+      console.log("greska ko change_shop_items");
+      //ako nema te kategorije gg
+      return;
   }
 
   for(let i = 0; i < items.length; i++){
@@ -131,7 +85,6 @@ function change_shop_items(){
     el.innerHTML = items[i];
     lista.appendChild(el);
   }
-
 }
 
 //ljudi koji su se pretplatili na newsletter

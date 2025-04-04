@@ -73,15 +73,19 @@
     align-items: center;
   }
   
-  .categories a{
+  .categories button{
+
     color: black;
     padding: 5px 20% 5px 20%;
     font-size: 20px;
     font-weight: bolder;
     overflow: hidden;
+    border: none;
+    background: none;
+
   }
 
-  .categories a:hover {
+  .categories button:hover {
     background-color: black;
     color: white;
   }
