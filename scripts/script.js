@@ -1,6 +1,6 @@
-/*
-    mijenjanje h2 ODABRANA KATEGORIJA
-*/
+import { generate_items_HTML } from "./generate";
+
+
 
 let odabrana_kategorija = ""
 
@@ -119,7 +119,6 @@ function change_shop_items(){
     }
   }
 }
-
 
 //ljudi koji su se pretplatili na newsletter
 //pop up alert dodđe te user unutra upiše svoju email-adresu

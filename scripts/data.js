@@ -1,30 +1,23 @@
-const data = {
-    "website": "Hrana",
+    const data = {
+    "website": "moj webshop",
     "categories": [
         { 
-            "name" : "Meso",
-            "image" : "meat.jpg",
+            "name" : "Građevisnka roba",
+            "image" : "images/beton.jpg",
             "products" : [
                 { 
-                    "name" : "Pileći batak 250 grama", "image" : "drumstick250g.jpg"
+                    "name" : "Beton", "image" : "images/beton.jpg"
                 },
                 { 
-                    "name" : "Juneći ramstek 1kg", "image" : "rumpsteak1kg.jpg"
+                    "name" : "Beton_2", "image" : "images/beton.jpg"
                 },                
                 { 
-                    "name" : "Hrenovke 150 grama", "image" : "sausages150gr.jpg"
+                    "name" : "Beton_3", "image" : "images/beton.jpg"
                 }
             ]
         },
-        { 
-            "name" : "Slatkiši",
-            "image" : "candy.jpg",
-            "products" : [
-                { 
-                    "name" : "Životinjsko carstvo", "image" : "zivotinjskocarstvo.jpg"
-                }
-            ]
-        }
     ]
-}
+};
 
+
+export default data;

@@ -21,14 +21,7 @@
   }
 
   /* to je od wehbshop dijela*/
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+
   
   /* Change the color of links on hover */
   .topnav a:hover {
@@ -110,12 +103,12 @@
 
 
   .main-body .infopage{
-    flex-direction: column;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     width: 100%;
     
     background-color: blue;
+    flex-direction: column;
     display: flex;
     align-items: center;
   }
@@ -145,25 +138,51 @@
 
   .main-body .shop-items ul{
     list-style: none;
+    display: flex;
   }
-
-    .main-body .shop-items ul li{
-      display:inline-block;
-    }
-
-
-
-.kontakt-main{
-  justify-content: center;
-  align-items: center;  
   
-}
+  .main-body .shop-items ul li{
+      margin: 5px;
+      display:inline-block;
+      border: #333;
+      border-style: solid;
+      border-radius: 1px;
+    }
+    
+      .main-body .shop-items ul li div{
+        
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        max-width: 200px;
+        max-height: 200px;
+        
+        overflow: hidden;
+      }
 
-.kontakt-main table{
+        .main-body .shop-items ul li div img{
+          border-collapse: separate;
+          object-fit: scale-down;
+          max-width: 75%;
+          max-height: 60%;
+        } 
+        
+        .main-body .shop-items ul li div p{
+          max-height: 20%;
+        }
+
+
+.kontakt-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  .kontakt-main table {
     color: black;
     background-color: aqua;
-    justify-content: center;
-    align-items: center;  
     border-collapse: separate;
-    border-spacing: 0 20px; 
+    border-spacing: 0 20px;
   }
+  
