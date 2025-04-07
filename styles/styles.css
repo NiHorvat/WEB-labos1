@@ -135,7 +135,7 @@
 .main-body .shop-items{
 
   grid-column: 2 / 3;
-  grid-row: 4 / 7; /* TODO ovo pogledati*/
+  grid-row: 4 / 7; 
   min-height: 400px;
   background: yellow;
 }
@@ -153,7 +153,7 @@
       border-radius: 1px;
     }
     
-      .main-body .shop-items ul li div{
+      .main-body .shop-items ul li button{
         
         flex-direction: column;
         display: flex;
@@ -165,28 +165,38 @@
         overflow: hidden;
       }
 
-        .main-body .shop-items ul li div img{
-          border-collapse: separate;
+
+      .main-body .shop-items ul li button:hover{
+        background-image: url("../images/shopping_cart_2.png");
+        background-color: white;
+        background-size: contain;
+        color: transparent;
+      }
+
+        .main-body .shop-items ul li button img{
           object-fit: scale-down;
           max-width: 75%;
           max-height: 60%;
         } 
         
-        .main-body .shop-items ul li div p{
+        .main-body .shop-items ul li button p{
           max-height: 20%;
         }
 
 
-.kontakt-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-  
-  .kontakt-main table {
-    color: black;
-    background-color: aqua;
-    border-collapse: separate;
-    border-spacing: 0 20px;
-  }
-  
+        .main-body .shop-items ul li button:hover img,
+        .main-body .shop-items ul li button:hover p {
+          opacity: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
