@@ -166,7 +166,7 @@ function generate_items_HTML(category_id) {
     let span_class = "no-text";
     let {ignore, quantity} = shopping_cart.get(item.id)  || {};
     if(quantity === undefined || quantity === null){
-      quantity = "";
+      quantity = "0";
     }else{
       quantity = String(quantity);
        span_class = "has-text";
@@ -174,12 +174,14 @@ function generate_items_HTML(category_id) {
 
     
 
-    let temp = `<button onclick="add_to_shoppingcart('${encodeURIComponent(JSON.stringify(item))}')">
+    let temp = `<div>
+    <button onclick="add_to_shoppingcart('${encodeURIComponent(JSON.stringify(item))}')">
+    </button>
     <span class = "${span_class}">${quantity}</span>
     <img src="${item.image}" alt="${item.name}">
     <p>${item.name}</p>
     <p>${category.name}</p>
-  </button>`;
+  </div>`;
     output.push(temp);
   }
 
@@ -208,6 +210,7 @@ function add_to_shoppingcart(encoded_item) {
   //ovo je užasno glupo i jako sporo
   change_categorie(current_category);
 
+  
 
 
   // Display cart contents

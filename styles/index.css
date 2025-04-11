@@ -5,9 +5,16 @@
   justify-content: space-between; /* Distribute items evenly */
   background-color: #333;
   display: flex;
+  flex-direction: row;
   padding: 1rem 1rem;
   align-items: center;
   margin: 5px;
+}
+
+.topnav div{ 
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 /* Style the links inside the navigation bar */
@@ -45,6 +52,28 @@
   max-height: 50px;
   height: 100%;
 }
+
+.topnav .shoppingcart{
+  display: flex;
+  flex-direction: column;
+}
+
+.topnav div span{
+  display: flex;
+  align-self: center;
+  position: absolute;
+  top: 20%;
+  right: 15%;
+}
+
+.topnav div span .has_text{
+  opacity: 0;
+}
+.topnav div span .no_text{
+  background-color: red;
+  opacity: 1;
+}
+
 
 .topnav h2 {
   color: white;
@@ -85,6 +114,11 @@
   font-size: 1rem;
 }
 
+.categories button:hover{
+  transform: scale(1.2);
+}
+
+
 .categories button:hover {
   background-color: black;
   color: white;
@@ -116,6 +150,8 @@
 
 .infopage a {
   color: black;
+  margin: 7px 15px;
+  padding: 5px 25% 5px 25%;
   font-size: 20px;
   font-weight: bolder;
   overflow: hidden;
@@ -124,6 +160,7 @@
 .infopage a:hover {
   background-color: black;
   color: white;
+  transform: scale(1.2);
 }
 
 .main-body .shop-items {
@@ -131,38 +168,39 @@
   grid-row: 2 / 3;
   min-height: 400px;
   background: yellow;
-  
 }
 
 .main-body .shop-items ul {
   list-style: none;
-  display: inline-flexbox;
+  display: flex;
   flex-direction: row;
-  size: 100%;
-  line-break: anywhere;
-  
+  justify-content: space-around; /* space between items */
+  flex-wrap: wrap; /* allows items to wrap to the next line when needed */
+  padding: 0;
+  margin: 0;
 }
 
+
 .main-body .shop-items ul li {
-  margin: 1%;
   display: inline-block;
   border-style: solid;
   background-color: antiquewhite;
-  max-width: 20%;
+  max-width: 30%;
   max-height: 20%;
-  
+  margin: 10px;
   
 }
 
-.main-body .shop-items ul li button {
+.main-body .shop-items ul li div {
+  margin-top: 10px;
   flex-direction: column;
   display: flex;
   align-items: center;
-
   overflow: hidden;
+  position: relative;
 }
-
-.main-body .shop-items ul li button:hover {
+/*
+.main-body .shop-items ul li div:hover {
   background-image: url("../images/shopping_cart_2.png");
   background-color: antiquewhite;
   background-size: cover;
@@ -171,7 +209,7 @@
   cursor: pointer;
 }
 
-.main-body .shop-items ul li button:active{
+.main-body .shop-items ul li div:active{
 
   background-image: url("../images/green_checkmark.png");
   background-color: antiquewhite;
@@ -180,43 +218,77 @@
   color: transparent;
 
 }
+*/
 
-.main-body .shop-items ul li button span{
+.main-body .shop-items ul li div button{
+  display: flex;
+  align-self: center;
+  position: absolute;
+  top: 50%;
 
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
-  align-self: flex-end;
+  aspect-ratio: 1 / 1;
+  width: 30%;
+  max-height: 30%;
+
+  opacity: 0;
+
+  background-image: url("../images/shopping_cart_2.png");
+  background-size: cover;
+  background-position-y: center;
+  cursor: pointer;
 
 }
 
-.main-body .shop-items ul li button span.no-text{
+
+
+
+
+.main-body .shop-items ul li div button:active{
+  transform: scale(1.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.main-body .shop-items ul li div span {
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.main-body .shop-items ul li div span.no-text{
   
   background-color: antiquewhite;
+  opacity: 0;
   
 }
 
-.main-body .shop-items ul li button span.has-text{
+.main-body .shop-items ul li div span.has-text{
   background-color: red;
 }
 
 
-.main-body .shop-items ul li button img {
+.main-body .shop-items ul li div img {
   object-fit: scale-down;
   max-width: 75%;
   max-height: 60%;
 }
 
-.main-body .shop-items ul li button p {
+.main-body .shop-items ul li div p {
   max-height: 20%;
 }
 
-.main-body .shop-items ul li button:hover img,
-.main-body .shop-items ul li button:hover span.has-text,
-.main-body .shop-items ul li button:hover p {
-  opacity: 0;
+
+.main-body .shop-items ul li div:hover button{
+  background-color: green;
+  opacity: 0.8;
 }
+
 
 
 @media screen and (max-width: 1024px) {
