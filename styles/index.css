@@ -4,8 +4,8 @@
   overflow: hidden;
   justify-content: space-between; /* Distribute items evenly */
   background-color: #333;
-  padding: 10px 20px;
   display: flex;
+  padding: 1rem 1rem;
   align-items: center;
   margin: 5px;
 }
@@ -37,13 +37,19 @@
 .topnav .toolbar-img {
   width: auto;
   max-height: 50px;
-  height: 50px;
+  height: 100%;
+}
+
+.topnav .toolbar-img-logo{
+  width: auto;
+  max-height: 50px;
+  height: 100%;
 }
 
 .topnav h2 {
   color: white;
   margin: 0 15px;
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
@@ -59,7 +65,7 @@
 
 .main-body .categories {
   grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-row: 1 / 2;
 
   background-color: rgb(17, 245, 17);
   display: flex;
@@ -71,7 +77,7 @@
 .categories button {
   color: black;
   padding: 5px 20% 5px 20%;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bolder;
   overflow: hidden;
   border: none;
@@ -86,7 +92,7 @@
 
 .main-body .welcome-page {
   grid-column: 2 / 3;
-  grid-row: 1 / 4;
+  grid-row: 1 / 2;
   background: rgb(44, 75, 224);
 }
 
@@ -98,8 +104,9 @@
 
 .main-body .infopage {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-row: 2 / 3;
   width: 100%;
+  max-height: 200px;
 
   background-color: blue;
   flex-direction: column;
@@ -109,8 +116,6 @@
 
 .infopage a {
   color: black;
-  margin: 7px 15px;
-  padding: 5px 25% 5px 25%;
   font-size: 20px;
   font-weight: bolder;
   overflow: hidden;
@@ -123,46 +128,54 @@
 
 .main-body .shop-items {
   grid-column: 2 / 3;
-  grid-row: 4 / 7;
+  grid-row: 2 / 3;
   min-height: 400px;
   background: yellow;
+  
 }
 
 .main-body .shop-items ul {
   list-style: none;
-  display: flex;
+  display: inline-flexbox;
+  flex-direction: row;
+  size: 100%;
+  line-break: anywhere;
+  
 }
 
 .main-body .shop-items ul li {
-  margin: 5px;
+  margin: 1%;
   display: inline-block;
   border-style: solid;
+  background-color: antiquewhite;
+  max-width: 20%;
+  max-height: 20%;
+  
+  
 }
 
 .main-body .shop-items ul li button {
   flex-direction: column;
   display: flex;
   align-items: center;
-  background-color: antiquewhite;
-  max-width: 200px;
-  max-height: 200px;
 
   overflow: hidden;
 }
 
 .main-body .shop-items ul li button:hover {
   background-image: url("../images/shopping_cart_2.png");
-  background-color: white;
+  background-color: antiquewhite;
   background-size: cover;
   background-position-y: center;
   color: transparent;
+  cursor: pointer;
 }
 
 .main-body .shop-items ul li button:active{
 
   background-image: url("../images/green_checkmark.png");
-  background-color: white;
-  background-size: cover;
+  background-color: antiquewhite;
+  background-size: auto;
   background-position-y: center;
   color: transparent;
 
@@ -203,4 +216,53 @@
 .main-body .shop-items ul li button:hover span.has-text,
 .main-body .shop-items ul li button:hover p {
   opacity: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .topnav{
+
+    flex-direction: column;
+
+
+  }
+
+  .topnav h2{
+    font-size: 1rem;
+  }
+
+  .toolbar-img-logo{
+    align-self: flex-start
+  }
+
+  .main-body{
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+
+  .main-body .categories{
+    grid-row: 3/4;
+    grid-column: 1/1;
+  }
+
+  .main-body .welcome-page{
+    grid-row: 1/2;
+    grid-column: 1/1;
+  }
+
+  .main-body .infopage {
+    grid-row: 4/5;
+    grid-column: 1/1;
+  }
+
+  .main-body .shop-items {
+
+    grid-row: 2/3;
+    grid-column: 1/1;
+
+  }
+
+
 }

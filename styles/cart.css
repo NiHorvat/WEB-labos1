@@ -40,6 +40,13 @@
   height: 50px;
 }
 
+
+.topnav .toolbar-img-logo{
+  width: auto;
+  max-height: 50px;
+  height: 100%;
+}
+
 .topnav h2 {
   color: white;
   margin: 0 15px;

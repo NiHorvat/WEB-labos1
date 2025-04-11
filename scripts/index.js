@@ -9,16 +9,16 @@
 // TU MAPIRAM KATEGORIJE S NJIHOVIM "pravim imenima"
 //zelim u kodu koristiti KATEGORIJA_1 a ne "Građevinska roba"
 //pa zato tu imam spojeno
-const KATEGORIJA_1 = ["Kategorija 1", "Građevinska roba"];
-const KATEGORIJA_2 = ["Kategorija 2", "Avioni"];
-const KATEGORIJA_3 = ["Kategorija 3", "Avioni"];
-const KATEGORIJA_4 = ["Kategorija 4", "Avioni"];
-const KATEGORIJA_5 = ["Kategorija 5", "Građevinska roba"];
-const KATEGORIJA_6 = ["Kategorija 6", "Avioni"];
-const KATEGORIJA_7 = ["Kategorija 7", "Avioni"];
-const KATEGORIJA_8 = ["Kategorija 8", "Avioni"];
-const KATEGORIJA_9 = ["Kategorija 9", "Avioni"];
-const KATEGORIJA_10 = ["Kategorija 10", "Avioni"];
+const KATEGORIJA_1 = ["Kategorija 1", "Bread"];
+const KATEGORIJA_2 = ["Kategorija 2", "Burgers"];
+const KATEGORIJA_3 = ["Kategorija 3", "Chicken"];
+const KATEGORIJA_4 = ["Kategorija 4", "Coockies"];
+const KATEGORIJA_5 = ["Kategorija 5", "Fish"];
+const KATEGORIJA_6 = ["Kategorija 6", "Muffins"];
+const KATEGORIJA_7 = ["Kategorija 7", "Pasta"];
+const KATEGORIJA_8 = ["Kategorija 8", "Pizza"];
+const KATEGORIJA_9 = ["Kategorija 9", "Ramen"];
+const KATEGORIJA_10 = ["Kategorija 10", "Sandwich"];
 
 let newsletterSubscribers = [];
 
@@ -59,6 +59,30 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     change_categorie(KATEGORIJA_6[1]);
+  });
+document
+  .getElementById(KATEGORIJA_7[0])
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    change_categorie(KATEGORIJA_7[1]);
+  });
+document
+  .getElementById(KATEGORIJA_8[0])
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    change_categorie(KATEGORIJA_8[1]);
+  });
+document
+  .getElementById(KATEGORIJA_9[0])
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    change_categorie(KATEGORIJA_9[1]);
+  });
+document
+  .getElementById(KATEGORIJA_10[0])
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    change_categorie(KATEGORIJA_10[1]);
   });
 
 function change_categorie(categorie) {
@@ -113,6 +137,7 @@ function change_shop_items(categorie) {
   }
 
   current_category = categorie;
+  console.log(categorie);
 
   for (let i = 0; i < items.length; i++) {
     const el = document.createElement("li");
@@ -180,7 +205,7 @@ function add_to_shoppingcart(encoded_item) {
 
   save_shoppingcart();
   //FIXME
-  //ovo je užasno glupo
+  //ovo je užasno glupo i jako sporo
   change_categorie(current_category);
 
 
