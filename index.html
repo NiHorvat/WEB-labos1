@@ -24,7 +24,7 @@
         </h2>
           <div>
             <div class="shoppingcart">
-              <span>0</span>
+              <span id = "span_cart"></span>
               <a href="cart.html">
                 <img src="images/shopping_cart_2.png" alt="shopping_cart" class = "toolbar-img">
               </a>
@@ -54,10 +54,8 @@
     
           </div>
 
-          <div class = "welcome-page">
-            
-            <h2>NEKA LIJEPA SLIKA I TEKST KOJI OPISUJU MOJ WEBSHOP</h2>
-            
+          <div class = "welcome-page" id = "welcome-page">
+                      
           </div>
 
           <div class="infopage">
@@ -68,7 +66,7 @@
 
           </div>
 
-          <div class="shop-items">
+          <div class="shop-items" id="shop-items">
 
             <H1>glavni dio stranice</H1>
             <ul id = "shop-items-list">
@@ -80,9 +78,9 @@
       </div>
 
 
-      <script src="scripts/index.js"></script>
-      <script src="scripts/data.js"></script>
       <script src="scripts/shopping_cart_items.js"></script>
+      <script src="scripts/data.js"></script>
+      <script src="scripts/index.js" defer></script>
 
 </body>
 </html>

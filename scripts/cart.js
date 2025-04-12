@@ -27,7 +27,6 @@ function change_shoppingcart_items(){
 
 
   // Display cart contents
-  console.log("🛒 Shopping Cart:");
   for (const [id, { item, quantity }] of shopping_cart.entries()) {
     console.log(`Product ID: ${id}, Name: ${item.name}, Quantity: ${quantity}`);
   }
@@ -58,6 +57,7 @@ function add_item(id){
   //mapi a to nije dobro
   save_shoppingcart();
   change_shoppingcart_items();
+  red_circle_shoppingcart();
 
 }
 
@@ -75,11 +75,31 @@ function remove_item(id){
   }
   save_shoppingcart();
   change_shoppingcart_items();
+  red_circle_shoppingcart();
+
+}
+function red_circle_shoppingcart(){
+
+  let n = number_items(); 
+  console.log("n = ", n);
+  if(n > 0){
+    span = document.getElementById("cart_span_cart");
+    span.innerHTML = n;
+    span.classList.add('has-text');
+  }else{
+    span = document.getElementById("cart_span_cart");
+    span.innerHTML = "";
+    span.classList.add('no-text');
+  }
 
 }
 
+
+
 //pokreni dok se pokrene html stranica
 change_shoppingcart_items();
+red_circle_shoppingcart();
+
 
 
 /*

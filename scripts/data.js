@@ -11,11 +11,6 @@ const data = {
                     "id": "3d867387"
                 },
                 {
-                    "name": "bread_2",
-                    "image": "images/bread/bread_2.jpg",
-                    "id": "38ff8ae3"
-                },
-                {
                     "name": "bread_3",
                     "image": "images/bread/bread_3.jpg",
                     "id": "4ba6bac1"
@@ -101,11 +96,6 @@ const data = {
                     "name": "chicken_4",
                     "image": "images/chicken/chicken_4.jpg",
                     "id": "8734540a"
-                },
-                {
-                    "name": "chicken_5",
-                    "image": "images/chicken/chicken_5.jpg",
-                    "id": "d3d6c8d4"
                 },
                 {
                     "name": "chicken_6",
@@ -206,16 +196,6 @@ const data = {
             "image": "images/muffins/muffin_1.jpg",
             "products": [
                 {
-                    "name": "muffin_1",
-                    "image": "images/muffins/muffin_1.jpg",
-                    "id": "77dda585"
-                },
-                {
-                    "name": "muffin_2",
-                    "image": "images/muffins/muffin_2.jpg",
-                    "id": "4650daba"
-                },
-                {
                     "name": "muffin_3",
                     "image": "images/muffins/muffin_3.jpg",
                     "id": "c0d4b6e1"
@@ -246,11 +226,6 @@ const data = {
             "name": "Pasta",
             "image": "images/pasta/pasta_1.jpg",
             "products": [
-                {
-                    "name": "pasta_1",
-                    "image": "images/pasta/pasta_1.jpg",
-                    "id": "cc743eee"
-                },
                 {
                     "name": "pasta_10",
                     "image": "images/pasta/pasta_10.jpg",
@@ -339,6 +314,21 @@ const data = {
             "image": "images/ramen/ramen_1.jpg",
             "products": [
                 {
+                    "name": "ramen_3",
+                    "image": "images/ramen/ramen_3.jpg",
+                    "id": "1d48835e"
+                },
+                {
+                    "name": "ramen_5",
+                    "image": "images/ramen/ramen_5.jpg",
+                    "id": "8c6ce98c"
+                },
+                {
+                    "name": "ramn_7",
+                    "image": "images/ramen/ramn_7.jpg",
+                    "id": "a58d8a9e"
+                },
+                {
                     "name": "ramen_1",
                     "image": "images/ramen/ramen_1.jpg",
                     "id": "a2704bea"
@@ -349,29 +339,14 @@ const data = {
                     "id": "a9a2efc4"
                 },
                 {
-                    "name": "ramen_3",
-                    "image": "images/ramen/ramen_3.jpg",
-                    "id": "1d48835e"
-                },
-                {
                     "name": "ramen_4",
                     "image": "images/ramen/ramen_4.jpg",
                     "id": "30346e86"
                 },
                 {
-                    "name": "ramen_5",
-                    "image": "images/ramen/ramen_5.jpg",
-                    "id": "8c6ce98c"
-                },
-                {
                     "name": "ramen_6",
                     "image": "images/ramen/ramen_6.jpg",
                     "id": "70782312"
-                },
-                {
-                    "name": "ramn_7",
-                    "image": "images/ramen/ramn_7.jpg",
-                    "id": "a58d8a9e"
                 }
             ]
         },
@@ -395,19 +370,9 @@ const data = {
                     "id": "fe5c8959"
                 },
                 {
-                    "name": "sandwich_4",
-                    "image": "images/sandwich/sandwich_4.jpg",
-                    "id": "481846f1"
-                },
-                {
                     "name": "sandwich_5",
                     "image": "images/sandwich/sandwich_5.jpg",
                     "id": "f69478ae"
-                },
-                {
-                    "name": "sandwich_6",
-                    "image": "images/sandwich/sandwich_6.jpg",
-                    "id": "83ba069a"
                 },
                 {
                     "name": "sandwich_7",

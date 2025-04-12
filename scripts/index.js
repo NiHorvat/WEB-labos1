@@ -144,6 +144,9 @@ function change_shop_items(categorie) {
     el.innerHTML = items[i];
     lista.appendChild(el);
   }
+
+  display_shop_items();
+
 }
 
 //ljudi koji su se pretplatili na newsletter
@@ -185,7 +188,6 @@ function generate_items_HTML(category_id) {
     output.push(temp);
   }
 
-
   return output;
 }
 
@@ -204,13 +206,13 @@ function add_to_shoppingcart(encoded_item) {
       quantity: 1
     });
   }
-
+  console.log("dodaj");
   save_shoppingcart();
+  update_shoppingcart();
+  red_circle_shoppingcart();
   //FIXME
   //ovo je užasno glupo i jako sporo
   change_categorie(current_category);
-
-  
 
 
   // Display cart contents
@@ -229,23 +231,55 @@ function add_bouble_color(){
 
   spans.forEach(span => {
     if (span.textContent.trim() !== '') {
-      console.log("added_text");
       span.classList.add('has-text');
     } else {
       span.classList.add('no-text');
-      console.log("added_no_text");
     }
   });
 
 }
+function red_circle_shoppingcart(){
+
+  let n = number_items(); 
+  if(n > 0){
+    span = document.getElementById("span_cart");
+    span.innerHTML = n;
+    span.classList.remove("no-text");
+    span.classList.add('has-text');
+  }else{
+    span = document.getElementById("span_cart");
+    span.innerHTML = "";
+    span.classList.remove("has-text");
+    span.classList.add('no-text');
+  }
+}
 
 
-document.getElementById("NewsLetter").addEventListener("click", function () {
-  let person = prompt(
-    "Unesite Vašu e-mail adresu da se čretplatite na naš newsletter"
-  );
-  newsletterSubscribers.push(person);
-  console.log(newsletterSubscribers);
-});
 
+//moves elements around if the category is selected/not selected
+//togles how elemets are spaces
+//jeli infopage gore i je li "vidljiv"
+function display_shop_items(){
+  console.log("display shopping items category = ",current_category);
+  let shop_items = document.getElementById("shop-items");
+  let infopage = document.getElementById("welcome-page");
+  
+  if(current_category == ""){
 
+    shop_items.classList.remove("selected");
+    infopage.classList.remove("selected");
+    shop_items.classList.add("no-selected");
+    infopage.classList.add("no-selected");
+
+  }else{
+    shop_items.classList.remove("no-selected");
+    infopage.classList.remove("no-selected");
+    shop_items.classList.add("selected");
+    infopage.classList.add("selected");
+
+  }
+}
+
+//SUFF koje run-a dok reloadam
+red_circle_shoppingcart();
+display_shop_items();

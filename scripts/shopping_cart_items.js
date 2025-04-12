@@ -3,9 +3,13 @@ let shopping_cart;
 //get number of items in shopping cart
 //za onaj span u košarici
 function number_items(){
+  update_shoppingcart();
 
-
-
+  let sum = 0; 
+  for (const [id, { item, quantity }] of shopping_cart.entries()) {
+    sum += quantity;
+  }
+  return sum;
 } 
 
 function update_shoppingcart() {

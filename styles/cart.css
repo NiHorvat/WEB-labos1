@@ -1,9 +1,8 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
   overflow: hidden;
   justify-content: space-between; /* Distribute items evenly */
-  background-color: #333;
+  background-color: #4E1F00;
   display: flex;
   flex-direction: row;
   padding: 1rem 1rem;
@@ -37,7 +36,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: rgb(17, 245, 17);
+  background-color: #FEBA17;
   color: white;
 }
 
@@ -58,21 +57,32 @@
   flex-direction: column;
 }
 
+
 .topnav div span{
   display: flex;
   align-self: center;
   position: absolute;
+  justify-content: center;
   top: 20%;
   right: 15%;
+
+  align-items: center;
+
+  border-radius: 50%;
+  height: 25%;
+  width: 25%;
+  
 }
 
-.topnav div span .has_text{
-  opacity: 0;
-}
-.topnav div span .no_text{
+.topnav div span.has-text{
   background-color: red;
   opacity: 1;
 }
+.topnav div span.no-text{
+  opacity: 0;
+}
+
+
 .topnav h2 {
   color: white;
   margin: 0 15px;
@@ -90,18 +100,23 @@
 
 .zaglavlje {
   grid-row: 1;
-  background-color: red;
+  background-color: #99BC85;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-image: url('../images/table.jpg');
+  background-size: cover;
+  background-position-y: 35%;
+
 }
 .zaglavlje h1 {
-  color: black;
+  color: white;
 }
 
 .proizvodi {
   grid-row: 2;
-  background-color: slateblue;
+  background-color: #F8F4E1;
   display: flex;
   justify-content: center;
   align-items: center;
