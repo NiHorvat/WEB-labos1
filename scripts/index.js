@@ -183,7 +183,6 @@ function generate_items_HTML(category_id) {
     <span class = "${span_class}">${quantity}</span>
     <img src="${item.image}" alt="${item.name}">
     <p>${item.name}</p>
-    <p>${category.name}</p>
   </div>`;
     output.push(temp);
   }

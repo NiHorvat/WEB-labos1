@@ -1,4 +1,10 @@
 /* Add a black background color to the top navigation */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+
 .topnav {
   overflow: hidden;
   justify-content: space-between; /* Distribute items evenly */
@@ -115,12 +121,16 @@
 .categories button {
   color: black;
   padding: 5px 20% 5px 20%;
+  margin-top: 10px;
   font-size: 1rem;
   font-weight: bolder;
   overflow: hidden;
   border: none;
   background: none;
-  font-size: 1rem;
+
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+
 }
 
 .categories button:hover{
@@ -286,7 +296,6 @@ nevidljivo dok je kategorija odabrana
 }
 
 
-
 .main-body .shop-items ul li div span.no-text{
   
   opacity: 0;
@@ -304,10 +313,12 @@ nevidljivo dok je kategorija odabrana
   object-fit: contain;
 }
 
+
 .main-body .shop-items ul li div p {
   max-height: 20%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
-
 
 .main-body .shop-items ul li div:hover button{
   background-color: green;

@@ -11,7 +11,6 @@ function generate_shoopingcart_HTML() {
         <img src="${item.image}" alt="${item.name}" />
         <p>${item.name}</p>
         <p>Quantity : ${quantity}</p>
-        <p>id : ${id}</p>
     </div>
     <button onclick = "add_item('${id}')">+</button>
   `;

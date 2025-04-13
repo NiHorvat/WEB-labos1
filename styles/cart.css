@@ -1,4 +1,9 @@
 /* Add a black background color to the top navigation */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+}
+
 .topnav {
   overflow: hidden;
   justify-content: space-between; /* Distribute items evenly */
